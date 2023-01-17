@@ -1,4 +1,7 @@
-# Dice Roll Simulator
+# Dice Roll Simulator 
+
+# Import Random 
+import random
 
 # Main Program Loop 
 loop = True 
@@ -12,11 +15,17 @@ while loop:
     print("5. Exit") 
 
     # Get Menu Selection from User
-    selection = input("Enter Selection (1-4): ") 
+    selection = input("Enter Selection (1-5): ") 
 
-    # Action from Menu
+    # Action from Menu 
+    dice1 = random.randrange(1,7) 
+    dice2 = random.randrange(1,7)
     if selection == "1":
-        print()
+        print(dice1, dice2, "sum:", int(dice1) + int(dice2)) 
+    elif selection == "2": 
+        n = 0 
+        for n in range(5): 
+            print(dice1, dice2, "sum:", int(dice1) + int(dice2)) 
     elif selection == "5": 
         print("Goodbye")
-    loop = False
+        loop = False
